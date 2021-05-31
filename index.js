@@ -26,7 +26,7 @@ app.get("/", function (req, res) { return res.redirect('https://wiresdev.ga')});
 
 app.post("/upload", Upload.single("file"), function (req, res) {
     if(keys.includes(req.headers['key'])){
-        res.send("https://i.wiresdev.ga/" + req.file.originalname)
+        res.json({'url': 'https://i.wiresdev.ga/' + req.file.originalname})
         console.log("Yay uploaded "+req.file.originalname)
     } else{
         res.sendStatus(401).send('Error: Unauthorized')
