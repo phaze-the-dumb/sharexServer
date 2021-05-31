@@ -18,7 +18,7 @@ var Upload = multer({ storage: storage });
 
 app.use(body_parser.json());
 app.use(body_parser.urlencoded({ extended: true }));
-app.use(cors.default());
+app.use(cors());
 
 app.use(express.static("Uploads"));
 
