@@ -20,7 +20,7 @@ app.use(body_parser.json());
 app.use(body_parser.urlencoded({ extended: true }));
 app.use(cors());
 
-app.use(express.static("Uploads"));
+app.use(express.static("uploads"));
 
 app.get("/", function (req, res) { return res.redirect('https://wiresdev.ga')});
 
